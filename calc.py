@@ -1,7 +1,14 @@
 from tkinter import *
-from operations import *
-
 line = " "
+
+def click(x):
+    global line
+
+def equals():
+    pass
+
+def clear():
+    pass
 
 def main():
     # Setting up the GUI
@@ -11,11 +18,11 @@ def main():
     equation = StringVar()
     equation.set("Calculate!")
     expressionline = Entry(calc, textvariable=equation)
-    expressionline.grid(columnspan = 5)
+    expressionline.grid(columnspan = 4)
 
     #Setting up the Buttons
-    clear = Button(calc,text = "Clear", width = 3, bg="gray",command = click(3))
-    clear.grid(row = 0, column = 3 )
+    cle = Button(calc,text = "Clear", width = 3, bg="gray",command = clear())
+    cle.grid(row = 0, column = 3 )
     zero = Button(calc,text = "0",width = 3, bg="gray",command = click("0"))
     zero.grid(row = 4, column = 0 )
     decimal = Button(calc,text = ".", width = 3, bg="gray",command = click("."))
@@ -49,6 +56,8 @@ def main():
     divide = Button(calc,text = "/", width = 3, bg="gray",command = click("/"))
     divide.grid(row = 1, column = 3 )
 
+    # Starting the GUI
     calc.mainloop()
+
 if __name__ == "__main__":
     main()
