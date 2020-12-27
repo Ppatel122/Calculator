@@ -10,19 +10,23 @@ def click(char):
       char(str): the character being added to the expression
     """
     global line
-    if char != "E":
+    # If the user presses equals, we evaluate the expression and check for
+    # an error
+    if char == "E":
+        try:
+            result = str(eval(line))
+            equation.set(result)
+        except:
+            equation.set("Invalid")
+    # If the user presses a button other than equals, we modify the equation
+    # accordingly
+    else:
         if char == "C":
             equation.set("Calculate!")
         else:
             line += char
             equation.set(line)
             return
-    else:
-        try:
-            result = str(eval(line))
-            equation.set(result)
-        except:
-            equation.set("Invalid")
     line = ""
 
 if __name__ == "__main__":
