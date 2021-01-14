@@ -1,5 +1,6 @@
 from tkinter import *
 line = ""
+
 class Calculator(Tk):
     def __init__(self):
         # Setting up the GUI
@@ -78,8 +79,8 @@ class Calculator(Tk):
                 self.equation.set(result)
             except:
                 self.equation.set("Invalid")
-        # If the user presses a button other than equals, we modify the equation
-        # accordingly
+        # If the user presses a button other than equals, we modify the
+        # equation accordingly
         else:
             if char == "C":
                 self.equation.set("Calculate!")
