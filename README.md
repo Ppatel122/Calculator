@@ -1,6 +1,5 @@
 # Calculator App
 Pranj Patel
 
-Calculator app in python using the tkinter module.
+Simple calculator app in python using the tkinter module.
 
-Demo being created.
